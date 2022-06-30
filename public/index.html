@@ -7,7 +7,99 @@
     <title>inventory-Application</title>
     <link rel="stylesheet" href="./build/tailwind.css">
 </head>
-<body>
-    
+<body class="bg-slate-900 w-full text-slate-100">
+    <div id="root">
+        <div class="max-w-sm lg:max-w-lg container mx-auto">
+            <div class="flex flex-col gap-y-6 py-6 px-4">
+                <!-- category -->
+                <div class="category flex flex-col gap-y-4">
+                    <h1 class="font-bold">Add new Category</h1>
+                    <div class="flex flex-col gap-y-4 bg-slate-700 rounded-lg p-2">
+                        <div class="category-title flex flex-col gap-y-2 w-1/2">
+                            <span>Title</span>
+                            <input type="text" placeholder="Title" class="form-input bg-transparent rounded-md ">
+                        </div>
+                        <div class="category-description flex flex-col gap-y-2">
+                            <span>Description</span>
+                            <textarea class="form-textarea bg-transparent rounded-md resize-none" placeholder="Description ..."></textarea>
+                        </div>
+                        <button type="button" class="bg-slate-500 border-none outline-none  rounded-md p-2 hover:border-none hover:outline-none hover:ring  hover:ring-offset-2 hover:ring-slate-500">Add new Category</button>
+                    </div>
+                </div>
+                <button type="button" class="text-start text-slate-600">Add new Category ?</button>
+                <!-- Add products -->
+                <div class="add-products flex flex-col gap-y-4">
+                    <h1 class="font-bold">Add new products</h1>
+                    <div class="flex flex-col gap-y-4 bg-slate-700 rounded-lg p-2">
+                        <div class="category-title flex flex-col gap-y-2 w-1/2">
+                            <span>Title</span>
+                            <input type="text" placeholder="Title" class="form-input bg-transparent rounded-md ">
+                        </div>
+                        <div class="category-description flex flex-col gap-y-2 w-1/2">
+                            <span>Quantity</span>
+                            <input type="number" class="form-input bg-transparent rounded-md" placeholder="Add Quantity">
+                        </div>
+                        <div class="category-description flex flex-col gap-y-2">
+                            <span>Select Category</span>
+                            <select name="" id="" class="bg-slate-700 rounded-md form-select">
+                                <option value="">Cat-1</option>
+                                <option value="">Cat-1</option>
+                                <option value="">Cat-1</option>
+                            </select>
+                        </div>
+                        <button type="button" class="bg-slate-500 border-none outline-none  rounded-md p-2 hover:border-none hover:outline-none hover:ring  hover:ring-offset-2 hover:ring-slate-500">Add new Product</button>
+                    </div>
+                </div>
+                <!-- sort and search -->
+                <div class="sort flex flex-col gap-y-4 mb-8">
+                    <div class="flex items-center">
+                        <span class="flex-1">Search</span>
+                        <div>
+                            <input type="text" class="form-input bg-transparent rounded-lg" placeholder="search">
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="flex-1">Sort</span>
+                        <div>
+                            <select name="" id="" class="form-select bg-slate-900 rounded-lg">
+                                <option value="newest">newest</option>
+                                <option value="oldest">oldest</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- products -->
+                <div class="products flex flex-col gap-y-4 overflow-auto">
+                    <div class="product flex items-center">
+                        <span class="flex-1">Title-1</span>
+                        <div class="flex items-center gap-x-2">
+                            <span class="date text-slate-300">1401/01/01</span>
+                            <span class="border border-slate-600 text-slate-600 p-1 rounded-md">frontend</span>
+                            <span class="w-8 h-8 rounded-full bg-slate-600 flex justify-center items-center">5</span>
+                            <span class="text-rose-700 border rounded-lg border-rose-700 p-1 cursor-pointer">Delete</span>
+                        </div>
+                    </div>
+                    <div class="product flex items-center">
+                        <span class="flex-1">Title-1</span>
+                        <div class="flex items-center gap-x-2">
+                            <span class="date text-slate-300">1401/01/01</span>
+                            <span class="border border-slate-600 text-slate-600 p-1 rounded-md">frontend</span>
+                            <span class="w-8 h-8 rounded-full bg-slate-600 flex justify-center items-center">5</span>
+                            <span class="text-rose-700 border rounded-lg border-rose-700 p-1 cursor-pointer">Delete</span>
+                        </div>
+                    </div>
+                    <div class="product flex items-center">
+                        <span class="flex-1">Title-1</span>
+                        <div class="flex items-center gap-x-2">
+                            <span class="date text-slate-300">1401/01/01</span>
+                            <span class="border border-slate-600 text-slate-600 p-1 rounded-md">frontend</span>
+                            <span class="w-8 h-8 rounded-full bg-slate-600 flex justify-center items-center">5</span>
+                            <span class="text-rose-700 border rounded-lg border-rose-700 p-1 cursor-pointer">Delete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
