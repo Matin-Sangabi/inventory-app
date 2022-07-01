@@ -15,6 +15,17 @@
                 <div class="category hidden">
                     <div class="flex flex-col gap-y-4">
                         <h1 class="font-bold">Add new Category</h1>
+                        <div class="flex flex-col gap-y-4 bg-slate-700 rounded-lg p-2">
+                            <div class="category-title flex flex-col gap-y-2 w-1/2">
+                                <span>Title</span>
+                                <input type="text" placeholder="Title" class="cat-title form-input bg-transparent rounded-md ">
+                            </div>
+                            <div class="category-description flex flex-col gap-y-2">
+                                <span>Description</span>
+                                <textarea type="text" class="cat-description form-textarea bg-transparent rounded-md resize-none" placeholder="Description ..."></textarea>
+                            </div>
+                            <button type="button" class="add-category bg-slate-500 border-none outline-none  rounded-md p-2 hover:border-none hover:outline-none hover:ring  hover:ring-offset-2 hover:ring-slate-500">Add new Category</button>
+                        </div>
                     </div>
                 </div>
                 <button type="button" class="add-new-category text-start text-slate-600">Add new Category ?</button>
@@ -24,25 +35,22 @@
                     <div class="flex flex-col gap-y-4 bg-slate-700 rounded-lg p-2">
                         <div class="category-title flex flex-col gap-y-2 w-1/2">
                             <span>Title</span>
-                            <input type="text" placeholder="Title" class="form-input bg-transparent rounded-md ">
+                            <input type="text" placeholder="Title" class="product-title form-input bg-transparent rounded-md ">
                         </div>
-                        <div class="category-description flex flex-col gap-y-2 w-1/2">
+                        <div class="flex flex-col gap-y-2 w-1/2">
                             <span>Quantity</span>
-                            <input type="number" class="form-input bg-transparent rounded-md" placeholder="Add Quantity">
+                            <input type="number" class="product-quantity form-input bg-transparent rounded-md" placeholder="Add Quantity">
                         </div>
-                        <div class="category-description flex flex-col gap-y-2">
+                        <div class=" flex flex-col gap-y-2">
                             <span>Select Category</span>
-                            <select name="" id="" class="bg-slate-700 rounded-md form-select">
-                                <option value="">Cat-1</option>
-                                <option value="">Cat-1</option>
-                                <option value="">Cat-1</option>
+                            <select class="product-category form-select bg-slate-700 rounded-md">                               
                             </select>
                         </div>
-                        <button type="button" class="bg-slate-500 border-none outline-none  rounded-md p-2 hover:border-none hover:outline-none hover:ring  hover:ring-offset-2 hover:ring-slate-500">Add new Product</button>
+                        <button type="button" class="add-new-products bg-slate-500 border-none outline-none  rounded-md p-2 hover:border-none hover:outline-none hover:ring  hover:ring-offset-2 hover:ring-slate-500">Add new Product</button>
                     </div>
                 </div>
                 <!-- sort and search -->
-                <div class="sort flex flex-col gap-y-4 mb-8">
+                <div class="sort flex flex-col gap-y-4 mb-6">
                     <div class="flex items-center">
                         <span class="flex-1">Search</span>
                         <div>
@@ -60,34 +68,7 @@
                     </div>
                 </div>
                 <!-- products -->
-                <div class="products flex flex-col gap-y-4 overflow-auto">
-                    <div class="product flex items-center">
-                        <span class="flex-1">Title-1</span>
-                        <div class="flex items-center gap-x-2">
-                            <span class="date text-slate-300">1401/01/01</span>
-                            <span class="border border-slate-600 text-slate-600 p-1 rounded-md">frontend</span>
-                            <span class="w-8 h-8 rounded-full bg-slate-600 flex justify-center items-center">5</span>
-                            <span class="text-rose-700 border rounded-lg border-rose-700 p-1 cursor-pointer">Delete</span>
-                        </div>
-                    </div>
-                    <div class="product flex items-center">
-                        <span class="flex-1">Title-1</span>
-                        <div class="flex items-center gap-x-2">
-                            <span class="date text-slate-300">1401/01/01</span>
-                            <span class="border border-slate-600 text-slate-600 p-1 rounded-md">frontend</span>
-                            <span class="w-8 h-8 rounded-full bg-slate-600 flex justify-center items-center">5</span>
-                            <span class="text-rose-700 border rounded-lg border-rose-700 p-1 cursor-pointer">Delete</span>
-                        </div>
-                    </div>
-                    <div class="product flex items-center">
-                        <span class="flex-1">Title-1</span>
-                        <div class="flex items-center gap-x-2">
-                            <span class="date text-slate-300">1401/01/01</span>
-                            <span class="border border-slate-600 text-slate-600 p-1 rounded-md">frontend</span>
-                            <span class="w-8 h-8 rounded-full bg-slate-600 flex justify-center items-center">5</span>
-                            <span class="text-rose-700 border rounded-lg border-rose-700 p-1 cursor-pointer">Delete</span>
-                        </div>
-                    </div>
+                <div class="products-list flex flex-col gap-y-6 overflow-auto">
                 </div>
             </div>
         </div>

@@ -21,4 +21,28 @@ export default class Storage {
     }
     localStorage.setItem("category" , JSON.stringify(categories));
   }
+
+  static getAllProducts(){
+    const getProducts = JSON.parse(localStorage.getItem("products")) || [];
+    return getProducts.sort((a, b) => {
+      return new Date(a.updated) > new Date(b.updated) ? -1 : 1;
+    });
+  }
+
+  static saveProducts(productToSave) {
+    const products = Storage.getAllProducts();
+    const existed = products.find((p) => p.id == productToSave.id);
+
+    if (existed) {
+      existed.title = productToSave.title;
+      existed.description = productToSave.description;
+      existed.selection = productToSave.selection;
+      existed.updated = new Date().toISOString();
+    } else {
+      productToSave.id = new Date().getTime();
+      productToSave.updated = new Date().toISOString();
+      products.push(productToSave);
+    }
+    localStorage.setItem("products" , JSON.stringify(products));
+  }
 }
