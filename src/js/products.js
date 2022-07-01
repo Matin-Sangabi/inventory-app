@@ -20,6 +20,8 @@ export default class Products {
         if(!title || !quantity || !selection) return;
         Storage.saveProducts({title , quantity , selection});
         this.createProductsList(Storage.getAllProducts());
+        productsTitle.value = "";
+        productsQuantity.value = "";
     }
 
     createProductsList(products){
@@ -36,6 +38,17 @@ export default class Products {
                 <span data-id="${product.id}" class="delete text-rose-700 border rounded-lg border-rose-700 p-1 cursor-pointer">Delete</span>
             </div>`;
             productsList.appendChild(div);
+        });
+        this.deleteProducts();
+    }
+    deleteProducts(){
+        const deleteProducts = document.querySelectorAll(".delete")
+            
+        deleteProducts.forEach(del => {
+            del.addEventListener("click" , (e)=>{
+                Storage.deleteProducts(e.target.dataset.id);
+                this.createProductsList(Storage.getAllProducts());
+            });
         });
     }
 }
