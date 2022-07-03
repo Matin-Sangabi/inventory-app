@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "postcss ./src/css/tailwind.css -o ./public/build/tailwind.css --watch"
+    "dev": "postcss ./src/css/tailwind.css -o ./public/build/tailwind.css --watch",
+    "product": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/tailwind.css --minify"
   },
   "keywords": [],
   "author": "Matin-sangabi",

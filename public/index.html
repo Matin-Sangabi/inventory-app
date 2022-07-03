@@ -46,21 +46,24 @@
                             <select class="product-category form-select bg-slate-700 rounded-md">                               
                             </select>
                         </div>
-                        <button type="button" class="add-new-products bg-slate-500 border-none outline-none  rounded-md p-2 hover:border-none hover:outline-none hover:ring  hover:ring-offset-2 hover:ring-slate-500">Add new Product</button>
+                        <div class="products-btn flex flex-col gap-y-2">
+                            <button type="button" class="flex-1 edit-product hidden bg-slate-500 border-none outline-none  rounded-md p-2 hover:border-none hover:outline-none hover:ring  hover:ring-offset-2 hover:ring-slate-500">Edit product</button>
+                            <button type="button" class="flex-1 add-new-products border-none bg-slate-500   outline-none  rounded-md p-2 hover:border-none hover:outline-none hover:ring  hover:ring-offset-2 hover:ring-slate-500">Add new Product</button>
+                        </div>
                     </div>
                 </div>
                 <!-- sort and search -->
                 <div class="sort flex flex-col gap-y-4 mb-6">
                     <div class="flex items-center">
-                        <span class="flex-1">Search</span>
+                        <span class= "flex-1">Search</span>
                         <div>
-                            <input type="text" class="form-input bg-transparent rounded-lg" placeholder="search">
+                            <input type="text" class="product-search form-input bg-transparent rounded-lg" placeholder="search">
                         </div>
                     </div>
                     <div class="flex items-center">
                         <span class="flex-1">Sort</span>
                         <div>
-                            <select name="" id="" class="form-select bg-slate-900 rounded-lg">
+                            <select name="" id="" class="product-sort form-select bg-slate-900 rounded-lg">
                                 <option value="newest">newest</option>
                                 <option value="oldest">oldest</option>
                             </select>

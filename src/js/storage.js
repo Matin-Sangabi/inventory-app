@@ -22,10 +22,15 @@ export default class Storage {
     localStorage.setItem("category" , JSON.stringify(categories));
   }
 
-  static getAllProducts(){
+  static getAllProducts(sort = "newest"){
     const getProducts = JSON.parse(localStorage.getItem("products")) || [];
     return getProducts.sort((a, b) => {
-      return new Date(a.updated) > new Date(b.updated) ? -1 : 1;
+      if(sort == "newest"){
+        return new Date(a.updated) > new Date(b.updated) ? -1 : 1;
+      }
+      else if(sort == "oldest"){
+        return new Date(a.updated) > new Date(b.updated) ? 1 : -1;
+      }
     });
   }
 
@@ -35,7 +40,7 @@ export default class Storage {
 
     if (existed) {
       existed.title = productToSave.title;
-      existed.description = productToSave.description;
+      existed.quantity = productToSave.quantity;
       existed.selection = productToSave.selection;
       existed.updated = new Date().toISOString();
     } else {
